@@ -7,7 +7,6 @@ export default class Home extends Component {
       <div className="container-fluid">
         <Helmet title="Home"/>
         <p>A list of things that aren't Gothic Architecture:</p>
-        <p>(there's nothing)</p>
       </div>
     );
   }
