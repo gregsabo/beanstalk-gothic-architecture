@@ -1,18 +1,21 @@
 language: node_js
-
 node_js:
-  - "0.12"
-  - "4.0"
-  - "4"
-  - "stable"
-
+- '0.12'
+- '4.0'
+- '4'
+- stable
 sudo: false
-
 before_script:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
 script:
-  - npm run lint
-  - npm test
-  - npm run test-node
+- npm run lint
+- npm test
+- npm run test-node
+deploy:
+  provider: heroku
+  api_key:
+    secure: f0sPnE0wyMhI0RrbbGnSnTmmJ8APyFZxx8bmXdBb19mz802mNicaNEL3/JvO3rIHuJC3FJfAI8WMIYlIGSy88pcbbh5VK1qQu0tbyf6DqMNrkmxX15akDTnnz7g3DgXlN6WUK4eUUK818lGROLBFNQr2fpVcfVwfGWctOsRlbFBKZjU86Dpa4ez8HpTSX/8BAsyKGCH+SHTYl/usPV5Wd/vTXk847ZfuA7eOwt4zibUBK3mGFUbdMJT4l3ydn8Eu6oDI+gvaWZTHoNFGCwJnFxnH2N1crjaVaQhblrjSyTNdNZRhXfIyStOJYsrgzhm/++D2VTQD+6UgwdhCOXvvmik1xlYu/sABTNWIcQByQjLBRm15A81kJK3ZH4QHpgXP9XsVoEfOYTfg0lsCqbKq5DP3VUu8kj3X61EzSiACT35my/+rjFlZ6ifoAbfrzvGwhJY0iBIpqBFM5naCuU4BXEpdIVnrXR6dqTCFgzB434OgvMf5ctjth7iMBDLXhfGQS9MGK6tiHmTSey3IG61bD0BxS8WNLOZjtPXrFQwsI6BfYTBF/M4m0DAr/MpVpJtFdTDrVEncKgdfnHulmF0ojQ+rqEUXz3cwUdrt22nU+e4nliQoxI+TojYsB5n0rrre6FiV4WctUpMI7/14frc+sS9DfxrztPh1dqyRBIebAXE=
+  app: beanstalk-gothic-architecture
+  on:
+    repo: gregsabo/beanstalk-gothic-architecture
