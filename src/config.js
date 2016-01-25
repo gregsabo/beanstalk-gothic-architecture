@@ -15,7 +15,7 @@ module.exports = Object.assign({
   apiHost: process.env.APIHOST || 'localhost',
   apiPort: process.env.APIPORT,
   app: {
-    title: 'Beanstalk: Gothic Architecture',
+    title: 'Gothic Architecture',
     description: 'All the modern best practices in one example.',
     head: {
       titleTemplate: 'Beanstalk: Gothic Architecture',
