@@ -6,8 +6,7 @@ export default class Home extends Component {
     return (
       <div className="container-fluid">
         <Helmet title="Home"/>
-        <h1>Welcome to Redux-Decagon</h1>
-        <p>A simple starting point for new apps.</p>
+        <p>A list of things that aren't Gothic Architecture:</p>
       </div>
     );
   }
